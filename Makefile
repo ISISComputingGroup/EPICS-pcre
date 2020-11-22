@@ -5,7 +5,7 @@ DIRS := $(DIRS) $(filter-out $(DIRS), configure)
 DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard *App))
 DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard iocBoot))
 
-DIRS := $(DIRS) 8-13
+DIRS := $(DIRS)
 
 define DIR_template
  $(1)_DEPEND_DIRS = configure
