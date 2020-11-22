@@ -37,15 +37,16 @@ pcre_SRCS += \
 INC += pcre.h pcreposix.h pcrecpp.h pcrecpparg.h pcre_stringpiece.h pcre_scanner.h
 
 pcrecpp_SRCS += pcrecpp.cc pcre_scanner.cc pcre_stringpiece.cc
-pcrecpp_LIBS += pcre
+pcrecpp_LIBS += pcreposix pcre
 
 pcreposix_SRCS += pcreposix.c
+pcreposix_LIBS += pcre
 
 pcretest_SRCS += pcretest.c pcre_printint.c
-pcretest_LIBS += pcre pcreposix
+pcretest_LIBS += pcreposix pcre
 
 pcre_jit_test_SRCS += pcre_jit_test.c
-pcre_jit_test_LIBS += pcre pcreposix
+pcre_jit_test_LIBS += pcreposix pcre
 
 pcregrep_SRCS += pcregrep.c
 pcregrep_LIBS += pcre

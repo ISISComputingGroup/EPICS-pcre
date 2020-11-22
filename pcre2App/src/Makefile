@@ -43,12 +43,13 @@ pcre2_SRCS += \
 INC += pcre2.h pcre2posix.h
 
 pcre2posix_SRCS += pcre2posix.c
+pcre2posix_LIBS += pcre2
 
 pcre2test_SRCS += pcre2test.c
-pcre2test_LIBS += pcre2 pcre2posix
+pcre2test_LIBS += pcre2posix pcre2 
 
 pcre2_jit_test_SRCS += pcre2_jit_test.c
-pcre2_jit_test_LIBS += pcre2 pcre2posix
+pcre2_jit_test_LIBS += pcre2posix pcre2 
 
 pcre2grep_SRCS += pcre2grep.c
 pcre2grep_LIBS += pcre2
