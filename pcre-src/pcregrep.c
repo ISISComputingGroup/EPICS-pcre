@@ -86,6 +86,11 @@ typedef int BOOL;
 
 #define PATBUFSIZE (MAXPATLEN + 10)   /* Allows for prefix+suffix */
 
+#if defined(_WIN32) && defined(_MSC_VER) && _MSC_VER < 1900
+#define snprintf _snprintf
+#endif
+
+
 /* Values for the "filenames" variable, which specifies options for file name
 output. The order is important; it is assumed that a file name is wanted for
 all values greater than FN_DEFAULT. */
