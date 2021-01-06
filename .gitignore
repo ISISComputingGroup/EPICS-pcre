@@ -12,3 +12,5 @@ runIOC.bat
 runIOC.sh
 relPaths.sh
 .project
+/pcreApp/src/testsaved*
+/pcreApp/src/testoutput*

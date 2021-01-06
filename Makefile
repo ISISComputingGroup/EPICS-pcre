@@ -5,7 +5,10 @@ DIRS := $(DIRS) $(filter-out $(DIRS), configure)
 DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard *App))
 DIRS := $(DIRS) $(filter-out $(DIRS), $(wildcard iocBoot))
 
-DIRS := $(DIRS) 8-13
+## pcre2 doesn't compile on vs2010
+ifneq ($(findstring 10.0,$(VCVERSION)),)
+DIRS := $(filter-out pcre2App, $(DIRS))
+endif
 
 define DIR_template
  $(1)_DEPEND_DIRS = configure
