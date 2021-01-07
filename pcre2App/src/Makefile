@@ -79,10 +79,10 @@ endif
 
 include $(TOP)/configure/RULES
 
-ifeq ($(OS_CLASS),WIN32)
-runtests :
-	..\run_tests.bat
-endif
+#ifeq ($(OS_CLASS),WIN32)
+#runtests :
+#	..\run_tests.bat
+#endif
 
 ## this just forces a reference, it is not listed in INC and so otherwise does not get built
 pcre2_auto_possess.c : ../O.Common/config.h
