@@ -45,6 +45,9 @@ pcreposix_LIBS += pcre
 pcretest_SRCS += pcretest.c pcre_printint.c
 pcretest_LIBS += pcreposix pcre
 
+# Tests requires 8MB of stack, 1MB is the windows default
+pcretest_LDFLAGS_WIN32 += -stack:8388608
+
 pcre_jit_test_SRCS += pcre_jit_test.c
 pcre_jit_test_LIBS += pcreposix pcre
 
