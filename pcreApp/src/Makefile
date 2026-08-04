@@ -88,10 +88,11 @@ endif
 
 include $(TOP)/configure/RULES
 
-ifeq ($(OS_CLASS),WIN32)
-runtests :
-	..\run_tests.bat
-endif
+## disable as seem to get funny batch file bahaviour on new computer
+#ifeq ($(OS_CLASS),WIN32)
+#runtests :
+#	..\run_tests.bat
+#endif
 
 ## this just forces a reference, it is not listed in INC and so otherwise does not get built
 pcre_byte_order.c : ../O.Common/config.h
